@@ -30,10 +30,6 @@ class BaseCommand extends Command {
     } catch (e) {}
   }
 
-  error(error) {
-    require('../../../../lib/error')(error);
-  }
-
   run(command, flags) {
     const args = [];
 
@@ -49,12 +45,8 @@ class BaseCommand extends Command {
     // TO-DO: spawn and detach.
     const child = exec(`${command} ${args}`,
       (error, stdout, stderr) => {
-        if (stderr) {
-          this.error(stderr);
-        }
-
-        if (error !== null) {
-          this.error(error);
+        if (stderr || error) {
+          throw stderr || error;
         }
       });
 
@@ -67,7 +59,7 @@ class BaseCommand extends Command {
 
   // TO-DO: accept arrays
   ejsToFile(template, destination, options) {
-    ejs.renderFile(path.join(__dirname, `/../../../Generators/templates/${template}.tpl`), options, function (err, data) {
+    ejs.renderFile(path.join(__dirname, `../../Generators/templates/${template}.tpl`), options, function (err, data) {
       try {
         fs.writeFile(destination, data, 'utf8');
       } catch (err) {

@@ -1,6 +1,6 @@
 {
   "name": "lesswork-commands",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Repository for the lesswork commands.",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lessworkjs/commands/issues"
   },
-  "homepage": "https://github.com/lessworkjs/commands#readme"
+  "homepage": "https://github.com/lessworkjs/commands#readme",
+  "dependencies": {
+    "lesswork-cmd": "^5.0.8"
+  }
 }
