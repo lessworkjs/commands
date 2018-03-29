@@ -1,0 +1,19 @@
+{
+  "name": "lesswork-commands",
+  "version": "1.0.0",
+  "description": "Repository for the lesswork commands.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lessworkjs/commands.git"
+  },
+  "author": "William Bowman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lessworkjs/commands/issues"
+  },
+  "homepage": "https://github.com/lessworkjs/commands#readme"
+}
