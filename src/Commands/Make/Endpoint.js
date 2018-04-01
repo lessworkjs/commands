@@ -22,7 +22,7 @@ class MakeEndpoint extends BaseCommand {
         Helpers.appRoot(`/app/Http/Controllers/${name}Controller.js`),
         Helpers.appRoot(`/routes/${name}.js`),
         Helpers.appRoot(`/app/Http/Controllers/${name}Controller.js`),
-        Helpers.appRoot(`/test/${name}Test.js`)
+        Helpers.appRoot(`/test/${name}.spec.js`)
       ])) {
       return this.error(`${this.icon('error')} Part of the endpoint '${name}' has already been created.`);
     }
@@ -31,7 +31,7 @@ class MakeEndpoint extends BaseCommand {
 
     this.ejsToFile('controller', Helpers.appRoot(`/app/Http/Controllers/${name}Controller.js`), data)
       .ejsToFile('route', Helpers.appRoot(`/routes/${name}.js`), data)
-      .ejsToFile('test', Helpers.appRoot(`/test/${name}Test.js`), data);
+      .ejsToFile('test', Helpers.appRoot(`/test/${name}.spec.js`), data);
 
     this.success(`${this.icon('success')} The endpoint '${name}' has been created.`);
   }
