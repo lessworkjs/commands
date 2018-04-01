@@ -17,11 +17,11 @@ class MakeTest extends BaseCommand {
       name
     };
 
-    if (this.checkIfExists(Helpers.appRoot(`/test/${name}Test.js`))) {
+    if (this.checkIfExists(Helpers.appRoot(`/test/${name}.spec.js`))) {
       return this.error(`${this.icon('error')} The test '${name}' has already been created.`);
     }
 
-    this.ejsToFile('test', Helpers.appRoot(`/test/${name}Test.js`), data);
+    this.ejsToFile('test', Helpers.appRoot(`/test/${name}.spec.js`), data);
 
     this.success(`${this.icon('success')} The test '${name}' has been created.`);
   }

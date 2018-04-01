@@ -1,6 +1,6 @@
 {
   "name": "lesswork-commands",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Repository for the lesswork commands.",
   "main": "index.js",
   "scripts": {
