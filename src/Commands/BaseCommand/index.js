@@ -1,5 +1,5 @@
 const {
-  Command
+  Command,
 } = require('@adonisjs/ace');
 
 const ejs = require('ejs');
@@ -14,7 +14,7 @@ class BaseCommand extends Command {
       file.forEach((check) => {
         if (fs.existsSync(check)) {
           results = true;
-          return;
+
         }
       });
       return results;
@@ -34,7 +34,7 @@ class BaseCommand extends Command {
     const args = [];
 
     if (flags) {
-      Object.keys(flags).forEach(flag => {
+      Object.keys(flags).forEach((flag) => {
         if (!flags[flag]) {
           return;
         }
@@ -43,14 +43,16 @@ class BaseCommand extends Command {
     }
 
     // TO-DO: spawn and detach.
-    const child = exec(`${command} ${args}`,
+    const child = exec(
+      `${command} ${args}`,
       (error, stdout, stderr) => {
         if (stderr || error) {
           throw stderr || error;
         }
-      });
+      }
+    );
 
-    child.stdout.on('data', function (data) {
+    child.stdout.on('data', (data) => {
       console.log(data);
     });
 
@@ -59,14 +61,12 @@ class BaseCommand extends Command {
 
   // TO-DO: accept arrays
   ejsToFile(template, destination, options) {
-    ejs.renderFile(path.join(__dirname, `../../Generators/templates/${template}.tpl`), options, function (err, data) {
-      try {
-        fs.writeFile(destination, data, 'utf8');
-      } catch (err) {
-        if (err) {
-          throw err;
+    ejs.renderFile(path.join(__dirname, `../../Generators/templates/${template}.tpl`), options, async (err, data) => {
+      await fs.writeFile(destination, data, 'utf8', (error) => {
+        if (error) {
+          throw error;
         }
-      }
+      });
     });
 
     return this;
