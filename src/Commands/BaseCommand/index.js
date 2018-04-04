@@ -1,6 +1,6 @@
 const {
   Command
-} = require('lesswork-cmd');
+} = require('@adonisjs/ace');
 
 const ejs = require('ejs');
 const fs = require('fs');

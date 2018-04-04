@@ -1,6 +1,6 @@
 {
   "name": "lesswork-commands",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Repository for the lesswork commands.",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/lessworkjs/commands#readme",
   "dependencies": {
-    "lesswork-cmd": "^5.0.8"
+    "@adonisjs/ace": "^5.0.1"
   }
 }
