@@ -1,7 +1,5 @@
-'use strict';
-
 class <%= name %>Controller extends require('lesswork-framework/src/Controller') {
-  * get() {
+  get() {
     return {
       hello: 'world'
     };

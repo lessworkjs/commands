@@ -1,8 +1,6 @@
-'use strict';
-
 class <%= name %> {
-  * handle(request, response, next) {
-      yield next;
+  async handle(request, next) {
+      await next;
   }
 }
 

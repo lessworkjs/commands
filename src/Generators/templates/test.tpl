@@ -1,5 +1,3 @@
-'use strict';
-
 const mochaPlugin = require('serverless-mocha-plugin');
 const expect = mochaPlugin.chai.expect;
 const assert = mochaPlugin.chai.assert;

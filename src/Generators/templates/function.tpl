@@ -1,5 +1,3 @@
-'use strict';
-
 const Kernel = require('lesswork-framework/src/Kernel');
 
 module.exports = {

@@ -1,8 +1,6 @@
-'use strict';
-
 const {
-  Command
-} = require('lesswork-cmd');
+  Command,
+} = require('@adonisjs/ace');
 
 class GreetCommand extends Command {
 

@@ -1,6 +1,6 @@
 const {
-  Command
-} = require('lesswork-cmd');
+  Command,
+} = require('@adonisjs/ace');
 
 class <%= name %>Commands extends Command {
 

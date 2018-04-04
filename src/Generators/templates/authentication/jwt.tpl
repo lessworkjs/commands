@@ -1,5 +1,3 @@
-'use strict';
-
 const Kernel = require('lesswork-framework/src/Kernel');
 
 const Jwt = require('lesswork-framework/src/Authentication/Jwt');

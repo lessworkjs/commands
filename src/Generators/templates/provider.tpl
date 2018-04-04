@@ -1,5 +1,3 @@
-'use strict';
-
 const {
   ServiceProvider
 } = require('adonis-fold');
@@ -25,7 +23,7 @@ class <%= name %>Provider extends ServiceProvider {
     *
     * @return {void}
     */
-  * boot() {
+  boot() {
       
   }
 }

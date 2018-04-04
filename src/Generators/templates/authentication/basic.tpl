@@ -1,5 +1,3 @@
-'use strict';
-
 const Kernel = require('lesswork-framework/src/Kernel');
 
 const Basic = require('lesswork-framework/src/Authentication/Basic');
