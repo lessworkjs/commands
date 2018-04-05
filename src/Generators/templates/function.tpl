@@ -1,4 +1,4 @@
-const Kernel = require('lesswork-framework/src/Kernel');
+const Kernel = require('@lessworkjs/framework/src/Kernel');
 
 module.exports = {
   handle: function () {

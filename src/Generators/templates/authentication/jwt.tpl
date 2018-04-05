@@ -1,6 +1,6 @@
-const Kernel = require('lesswork-framework/src/Kernel');
+const Kernel = require('@lessworkjs/framework/src/Kernel');
 
-const Jwt = require('lesswork-framework/src/Authentication/Jwt');
+const Jwt = require('@lessworkjs/framework/src/Authentication/Jwt');
 
 module.exports = {
   auth: function () {

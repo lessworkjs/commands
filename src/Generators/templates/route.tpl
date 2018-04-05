@@ -1,4 +1,4 @@
-const Route = require('lesswork-framework/src/Route');
+const Route = require('@lessworkjs/framework/src/Route');
 
 module.exports = {
   get: function () {

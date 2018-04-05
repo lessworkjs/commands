@@ -1,5 +1,5 @@
 {
-  "name": "lesswork-commands",
+  "name": "@lessworkjs/commands",
   "version": "1.0.8",
   "description": "Repository for the lesswork commands.",
   "main": "index.js",
